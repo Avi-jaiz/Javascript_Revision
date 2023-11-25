@@ -1,0 +1,7 @@
+{
+    "name":"avishekh",
+    "age":30,
+    "email":"j@gmail.com",
+    "isValid":true,
+    "hobbies":["music","running","coding"]
+}
