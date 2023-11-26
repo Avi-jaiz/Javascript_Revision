@@ -888,6 +888,8 @@ something like this
 
 /*
 ------------
+         *MAP*
+
 Map is a build-in data structure introduced in (ES6) that allows you to store key-value pairs where both the keys and values can be of any data types. It is similar to an object, but with a few key differences
 
 // => Keys can be of any data type: Unlike objects , where keys are limited to string and symbols, May allows you to use any data types as keys, including numbers, booleans , objects and even other Map instances
@@ -898,3 +900,131 @@ Map is a build-in data structure introduced in (ES6) that allows you to store ke
 
 ------------
 */
+
+// const map = new Map();
+
+// const key1 = "string";
+// const key2 = {};
+
+// const keyThree = function () {};
+// map.set(key1, "Its Key1 Value");
+// map.set(key2, "hey there!!");
+
+// console.log("map", map);
+
+// console.log("keys", map.keys()); // it will return keys i.e "string" , Object
+
+// console.log("values", map.values()); // it will return the values corresponding to the key ie {'its key1 value','its key2 value'}
+
+// Deleting a key
+
+// console.log(map.delete(key2)); //it returns true if there was the key that was passed inside delete() method
+
+// console.log(map, "Deleted map"); // The remaining key value appears after using delete() method
+
+// //Checking the size of the map
+
+// console.log(map.size, "size of the map");
+
+// Iterating in Map method
+
+// for (let [key, value] of map) {
+//   console.log(`${key} ==== ${value}`);
+// }
+
+// // OR
+
+// for (let key of map.keys()) {
+//   console.log("loop", key);
+// }
+
+// // For Values
+
+// for (let value of map.values()) {
+//   console.log("values", value);
+// }
+
+/*
+---------------
+Question For Practice using Map()
+
+1. Create a new Map
+2. Set these properties ("a","b","c")
+3. Set these values (1,2,3)
+4. Get 'a' from that map
+5. Check the size of that map
+6. Delete the property "b" & then check the size
+
+
+                        -------------------------
+
+
+*/
+
+// const map = new Map();
+
+// map.set("a", 1);
+// map.set("b", 2);
+// map.set("c", 3);
+
+// console.log("map", map);
+// const getA = map.get("a");
+// console.log("getA", getA);
+// console.log("size of map", map.size);
+
+// const deleteB = map.delete("b");
+// console.log("deleteB", deleteB);
+
+// console.log(map.size, "new size of the map");
+
+/*
+--------------
+Set is a built-in data structure introduced in ES6 that represents a collection of unique values. Unlike arrays, set allows you to strore only unique values, which means dublicate values are automatically removed. Each value can occur only once within a Set
+
+// Set objects are useful when you need to store a list of unique elements and quickly check for the existence of a specified value
+
+                  -------------------------
+*/
+
+// const initialValue = [1, 2, 2, 2, 2, 3];
+// const mySet = new Set(initialValue);
+
+// console.log("mySet", mySet); // this will only return {1,2,3} only unique values
+
+//--- Adding The elements manually to the set
+
+// const mySet = new Set();
+
+// mySet.add("apple");
+// mySet.add("banana");
+// mySet.add("orange");
+// mySet.add("apple");
+
+// console.log("mySet", mySet);
+// // {"apple","banana","orange"}
+
+// //Although through add() method apple is added two times the set will discard the dublicate entry and always return the orignal elements
+
+// // has() method in set ==> it will return true if the passed value exists in the set
+
+// console.log(mySet.has("apple")); // True
+// console.log(mySet.has("chiku")); //False
+
+// //Deleting a value from set
+
+// mySet.delete("banana");
+// console.log("mySet", mySet); //It will return the remaining elements after deleting "banana" from the set
+
+// console.log(mySet.size, "size of the set"); // 2
+
+// // mySet.clear(); // it clears all the elements from the set
+
+// console.log(mySet, "after clearing"); // returns 0 bocz above clear() method is used
+
+// // Looping across set
+
+// for (let items of mySet) {
+//   console.log("items", items);
+// }
+
+// Loop results in Apple orange
