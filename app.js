@@ -730,3 +730,171 @@ that allows you to check the elements of an array based on a given condition. Bo
 // The some() method tests wheather atleast one element in the array passes the condition specified by the provided callback function. It returns true if the callback function returns true for atleast one element , and false if no element passes the condition
 
 ///////////////////////////////////////
+
+// const peoples = ["huxn", "jordan", "alex"];
+
+// const res = peoples.every((people) => people.length === 4);
+// console.log("res", res); //False
+// const res1 = peoples.some((people) => people.length < 5);
+// console.log("res1", res1); //True bcoz first element length is less than 5
+
+// const songs = [
+//   { name: "lucky you", singer: "Joyner", duration: 4.34 },
+//   { name: "Just like you", singer: "NF", duration: 3.23 },
+//   { name: "Humble Singer ", singer: "Kendrick Lamar", duration: 2.33 },
+//   { name: "Old Town Road", singer: "Lil Nas X", duration: 1.43 },
+//   { name: "Cold SHoulder", singer: "Central", duration: 5.23 },
+// ];
+
+// const songsRes = songs.every((songs) => songs.duration > 3);
+
+// const songsSome = songs.some((songs) => songs.duration > 3);
+
+//console.log("songsSome", songsSome); //True
+
+//console.log("songsRes", songsRes); // False
+
+const products = [
+  { name: "Checkers", category: "Toys" },
+  { name: "Harry Potter", category: "Books" },
+  { name: "IPhone", category: "Electronics" },
+  { name: "Learn PHP", category: "Books" },
+];
+
+let allProductsBooks = true;
+let someProductsBooks = false;
+
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].category !== "Books") {
+//     allProductsBooks = false;
+//   } else {
+//     someProductsBooks = true;
+//   }
+// }
+//console.log(allProductsBooks, someProductsBooks)
+//allProductsBooks return false and someProductsBooks returns true
+
+// Refactor the above code using every() and some()
+
+allProductsBooks = products.every((books) => books.category === "Books");
+
+console.log("allProductsBooks", allProductsBooks);
+//Above will return false
+
+// someProductsBooks = products.some((books) => books.category === "Books");
+
+// console.log("someProductsBooks", someProductsBooks);
+
+//the seconds code will return true as some of the element inside category key contains books
+
+// function categoryChecker(books) {
+//   if (books.category === "Books") {
+//     return true;
+//   }
+// }
+
+// OR create func expression with shorter syntax
+
+// const categoryChecker = (books) => (books.category === "Books" ? true : false);
+
+// const check = products.some(categoryChecker); // Here we have passed an function which is declared just above
+
+// console.log("check", check); // It will return check
+
+////// --------------------------/////////////////////////
+
+/*
+
+Reduce() Method 
+
+The reduce() method applies the reducer function to each element of an array , accumulating the results into a single value. It is often used to perform calculations or aggregations on array elements and simplify the array into a single value
+
+*/
+
+// Syntax of reduce() method
+
+/* array.reduce((prevValue,currentValue,currentIndex , array)=>{
+  return prevValue + CurrentValue
+} , initialValue= a default value can be provided here) */
+// const num = [1, 2, 3, 4, 5, 6];
+
+// const reducedValue = num.reduce((prev, current, index, array = [1, 2, 3]) => {
+//   return prev + current;
+// }, 0);
+
+// console.log(reducedValue, "reduced");
+
+// const peoples = [
+//   { name: "huxn", age: 17 },
+//   { age: 11, name: "Kites" },
+//   { name: "jimmy", age: 50 },
+//   { name: "john", age: 18 },
+//   { name: "alex", age: 20 },
+//   { name: "jimmy", age: 30 },
+//   { name: "alex", age: 90 },
+// ];
+
+// // find the oldest guy from the array
+
+// const oldest = peoples.reduce((p, c) => (p.age > c.age ? p : c));
+
+// console.log("oldestPPL", oldest);
+
+/*const words = [
+  "apples",
+  "banana",
+  "orange",
+  "banana",
+  "apples",
+  "orange",
+  "apples",
+  "grape",
+];*/
+
+//Filter out unique elements from words array using reduce() method
+
+// const uniqueWords = words.reduce((prev, curr) => {
+//   prev[curr] = prev[curr] || 0 + 1;
+//   return prev;
+// }, {});
+// console.log("uniqueWords", uniqueWords);
+
+// const wordFrequency = words.reduce((prev, curr) => {
+//   prev[curr] = (prev[curr] || 0) + 1;
+//   return prev;
+// }, []);
+
+// console.log("wordFrequency", wordFrequency);
+
+/* ------------- Practice Question ---------------
+
+Write a function called calculateProduct that takes an array of numbers as an argument and returns the product of all the numbers in the array
+
+write the calculateProduct function using reduce() method to achieve this task
+
+something like this
+
+
+
+*/
+
+// const numbers = [2, 3, 4, 5];
+
+// const calculateProduct = (prev, current) => prev * current;
+
+// const product = numbers.reduce(calculateProduct);
+
+// console.log(product, "product");
+
+/*
+------------
+Map is a build-in data structure introduced in (ES6) that allows you to store key-value pairs where both the keys and values can be of any data types. It is similar to an object, but with a few key differences
+
+// => Keys can be of any data type: Unlike objects , where keys are limited to string and symbols, May allows you to use any data types as keys, including numbers, booleans , objects and even other Map instances
+
+// => Maintains insertion order : Map preserves the order of key- value pairs as they were inserted, while objects keys may not be guaranteed to be in a specific order.
+
+// => Iteration : Map provides built-in methods for easy iteration over its element
+
+------------
+*/
