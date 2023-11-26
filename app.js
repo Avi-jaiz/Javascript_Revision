@@ -393,12 +393,12 @@
 
 // console.log(apple, restFruitsColor);
 
-const person = {
-  name: "John Doe",
-  age: 30,
-  gender: "male",
-  country: "USA",
-};
+// const person = {
+//   name: "John Doe",
+//   age: 30,
+//   gender: "male",
+//   country: "USA",
+// };
 
 // const { name: personName, age: personAge, country: personCountry } = person;
 // console.log("personName", personName);
@@ -498,7 +498,7 @@ JavaScript Advanced Topics
 // This function gets called one time for every element in the array
 // Whatever is inside the function that logic happens
 
-const color = ["teal", "blue", "red", "green"];
+// const color = ["teal", "blue", "red", "green"];
 
 // for (var i = 0; i < color.length; i++) {
 //   console.log("color[i]", color[i]);
@@ -663,10 +663,70 @@ The find() method is another build-in array helper in javascript that allows to 
 
 */
 
-const peoples = [
-  { name: "huxn", age: 17 },
-  { name: "john", age: 18 },
-  { name: "alex", age: 20 },
-  { name: "jimmy", age: 30 },
-  { name: "alex", age: 30 },
-];
+// const peoples = [
+//   { name: "huxn", age: 17 },
+//   { name: "jimmy", age: 50 },
+//   { name: "john", age: 18 },
+//   { name: "alex", age: 20 },
+//   { name: "jimmy", age: 30 },
+//   { name: "alex", age: 30 },
+// ];
+
+// const findPeople = peoples.find((items) => items.name === "jimmy");
+
+// console.log("findPeople", findPeople);
+
+// const posts = [
+//   { id: 1, content: "Good Post" },
+//   { id: 2, content: "Funny Post" },
+//   { id: 3, content: "Sad Post" },
+// ];
+
+// const findFunny = posts.find((items) => items.content === "Funny Post");
+
+// console.log("find Funny", findFunny);
+
+// const age = [3, 10, 18, 20];
+
+// const ageFinder = (ages) => {
+//   return ages > 5;
+// };
+
+// const res = age.find(ageFinder);
+
+// console.log("res", res);
+
+// const products = [
+//   { name: "Checkers", category: "Toys" },
+//   { name: "Harry Potter", category: "Books" },
+//   { name: "IPhone", category: "Electronics" },
+//   { name: "Learn PHP", category: "Books" },
+// ];
+
+// let product;
+
+// for (let i = 0; i < products.length; i++) {
+//   if (products[i].category === "Books") {
+//     product = products[i];
+//     break;
+//   }
+// }
+
+// console.log("product", product);
+
+/*
+Above code works as a find Method using for loop
+*/
+//--------------------------------------------------------
+
+/*
+The every() and some() are two built-in array methods in Javascript
+that allows you to check the elements of an array based on a given condition. Both methods takes a callback function as an argument, which is applied to each element of the array.
+
+*/
+
+//The every() method tests weather all elements in the array pass the condition specified by the provided callback function. It returns true if the callback function returns true for every element, and false if any element fails the condition
+
+// The some() method tests wheather atleast one element in the array passes the condition specified by the provided callback function. It returns true if the callback function returns true for atleast one element , and false if no element passes the condition
+
+///////////////////////////////////////
