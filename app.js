@@ -1028,3 +1028,122 @@ Set is a built-in data structure introduced in ES6 that represents a collection 
 // }
 
 // Loop results in Apple orange
+
+//-------------------
+/*
+Practice Question for Set()
+
+1. Create a Set name (letters).
+2. Add ("a","b","c") as values.
+3. Iterate over Set & log the values
+
+*/
+
+//-----------------
+
+// const letter = new Set();
+
+// letter.add("a");
+// letter.add("b");
+// letter.add("c");
+// console.log("letter", letter);
+
+// for (let value of letter) {
+//   console.log(value, "values");
+// }
+
+/*
+
+___________SYMBOL______
+
+Symbol is unique and immutable primitive data type introduced in ECMAscript6 (ES6). A symbol is often used as an identified for object properties to avoid potential naming conflicts.
+
+Unlike string or numbers, symbol are guaranteed to be unique. When you create a symbol, it is unique and cannot be recreated or changed. This uniqueness ensure that symbols will not collide with other property names, even if they have the same string representation.
+
+*/
+
+// const mySymbol = Symbol();
+// console.log("symbol", typeof mySymbol); // returns symbol
+
+// // comparing symbols
+
+// const symbol1 = Symbol("name");
+// const symbol2 = Symbol("name");
+// console.log(symbol1 === symbol2); // returns false bocz no two symbols can be same
+
+// const obj = {};
+// obj[symbol1] = "Value for 1";
+// obj[symbol2] = "Value for 2";
+
+// console.log("obj", obj);
+
+// const symbol3 = Symbol();
+// const symbol4 = Symbol();
+
+// const aviObj = {};
+// aviObj.name = "Avishekh Jaiswal";
+// aviObj["location"] = "India";
+// aviObj[symbol3] = "I am Male";
+// aviObj[symbol4] = "I am a programmer";
+// console.log("aviObj", aviObj);
+
+// for (let [keys, values] in aviObj) {
+//   console.log("key", keys); // This returns all keys except Symbols
+//   console.log("values", values);
+// }
+
+// Find Unique Numbers
+
+// let a = [1, 2, 3, 4, 3, 2, 1];
+
+// function findUniqueNum(a) {
+//   let obj = {};
+//   for (let num of a) {
+//     obj[num] = (obj[num] || 0) + 1;
+//   }
+
+//   for (let key in obj) {
+//     if (obj[key] === 1) {
+//       return key;
+//     }
+//   }
+//
+// }
+
+// console.log("findUniqueNum", findUniqueNum(a));
+
+/*
+-----
+Practice Questions for Symbol
+
+1. Create a symbol provide a value of "foo".
+2. Check the type of that symbol.
+3. Create empty object.
+4. Store symbol as the property to that object.
+           ----------
+*/
+
+// const logo = Symbol("foo");
+// console.log("type of the symbol", typeof logo);
+
+// const emptyObj = {
+//   firstName: "avi",
+// };
+
+// emptyObj[logo] = "this property hold the value of the symbol";
+
+// console.log("emptyObj", emptyObj);
+
+// for (let key in emptyObj) {
+//   console.log("key", key);
+// }
+
+
+/*
+//////////////////////////////////
+//////////////////////////////////
+---------------DOM (Document Object Model) --------------
+
+/////////////////////////////////
+////////////////////////////////
+*/
